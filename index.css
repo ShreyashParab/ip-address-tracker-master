@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    font-family: Rubik,'san-serif';
+
+}
+
+.block{
+    position: relative;
+}
+
+.inputArea{
+    color: white;
+    background: url('images/pattern-bg-mobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.inputArea .input-group{
+    display: flex;
+    justify-content: space-around;
+}
+
+.input-group input[type="text"]{
+    padding: 20px;
+    min-width: 250px;
+    
+    /* max-width: 500px; */
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: none;
+    outline: none;
+    color: black;
+    font-size: large;
+}
+
+.input-group button{
+    padding: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: black;
+}
+
+.error{
+    color: red;
+    display: flex;
+    align-items: center;
+    display: none;
+}
+
+.details{
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    border-radius: 10px;
+    width: 70%;
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    z-index: 2;
+}
+
+.title{
+    color:  hsl(0, 0%, 59%);
+    font-size: large;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.detail{
+    font-weight: bold;
+}
+
+#map{
+    min-height: 60vh;
+    z-index: 1;
+    /* pointer-events: none; */
+}
+
+@media screen and (min-width: 800px) and (max-width: 950px) {
+
+    .details{
+     left: 13%;
+     top: 30%;
+   }
+}
+
+@media screen and (min-width: 900px){
+    .inputArea{
+        background: url('images/pattern-bg-desktop.png') no-repeat cover;
+    }
+    
+    .details{
+        /* display: flex; */
+        flex-direction: row;
+        justify-content: space-around;
+        top: 30%;
+    }
+
+    .container{
+        padding: 20px;
+        border-right: 1px solid black;
+    }
+}
